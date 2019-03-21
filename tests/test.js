@@ -1,4 +1,4 @@
-const SchoolMeal = require("../src/SchoolMeal");
+const SchoolMeal = require("schoolmeal");
 process.env.TZ = 'Asia/Seoul';
 
 let meal = new SchoolMeal("BUSAN", 4, "C100000394");

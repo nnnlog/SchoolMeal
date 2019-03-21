@@ -9,19 +9,15 @@
   ],
   "homepage": "https://github.com/nnnlog/SchoolMeal",
   "bugs": {
-    "email": "sorisem4106@naver.com",
-    "url": "https://github.com/nnnlog/SchoolMeal/issues"
+    "url": "https://github.com/nnnlog/SchoolMeal/issues",
+    "email": "sorisem4106@naver.com"
   },
   "license": "MIT",
-  "author": {
-    "email": "sorisem4106@naver.com",
-    "url": "http://pmmp.me",
-    "name": "엔로그 (박찬솔)"
-  },
+  "author": "엔로그 <sorisem4106@naver.com> (박찬솔)",
   "main": "src/SchoolMeal.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nnnlog/SchoolMeal"
+    "url": "git+https://github.com/nnnlog/SchoolMeal.git"
   },
   "scripts": {
     "test": "node tests/test.js"
@@ -29,5 +25,9 @@
   "dependencies": {
     "request": "^2.88.0",
     "promise": "^8.0.2"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {}
 }
