@@ -1,9 +1,30 @@
 {
   "name": "schoolmeal",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "학교 급식을 받아오는 API 입니다.",
+  "keywords": [
+    "neis",
+    "school",
+    "schoolmeal"
+  ],
+  "homepage": "https://github.com/nnnlog/SchoolMeal",
+  "bugs": {
+    "email": "sorisem4106@naver.com",
+    "url": "https://github.com/nnnlog/SchoolMeal/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "email": "sorisem4106@naver.com",
+    "url": "http://pmmp.me",
+    "name": "엔로그 (박찬솔)"
+  },
+  "main": "src/SchoolMeal.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nnnlog/SchoolMeal"
+  },
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "node tests/test.js"
   },
   "dependencies": {
     "request": "^2.88.0",

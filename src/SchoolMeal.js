@@ -1,4 +1,3 @@
-const querystring = require("querystring");
 const request = require("request");
 const EduSession = require("./EduSession");
 const Meal = require("./Meal");
@@ -64,6 +63,10 @@ class SchoolMeal {
         this._cookie = new EduSession(SchoolMeal.eduCode, this._code);
     }
 
+    /**
+     *
+     * @returns {Promise}
+     */
     getMonthlyMeal() {
         return new Promise(async (resolve) => {
             request.post("https://stu." + (SchoolMeal.eduCode[this._code] || SchoolMeal.eduCode.SEOUL) + "/sts_sci_md00_001.ws", {
@@ -92,6 +95,11 @@ class SchoolMeal {
         });
     }
 
+    /**
+     *
+     * @param {Date} searchDate     검색할 날짜
+     * @returns {Promise}
+     */
     async getWeeklyMeal(searchDate) {
         let that = this;
         return new Promise(async (resolve) => {
@@ -114,7 +122,6 @@ class SchoolMeal {
                     }, (err, res, body) => {
                         let lists = body.resultSVO.weekDietList;
                         let day = ['sun', 'mon', 'tue', 'wed', 'the', 'fri', 'sat'];
-                        //console.log(require("util").inspect(lists[2], {showHidden: true, depth: null}))
                         for (let d of day) {
                             if (lists[2][d] !== null) {
                                 let meal = Meal.parseWeek(lists[0][d], lists[2][d], body.resultSVO.schMmealScCode);
