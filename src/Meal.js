@@ -43,7 +43,7 @@ class Meal {
      *
      * @param   {string}    day
      * @param   {string}    str
-     * @param   {int}    mealType
+     * @param   {int}       mealType
      * @returns {Meal}
      */
     static parseWeek(day, str, mealType) {
