@@ -76,6 +76,12 @@ class Meal {
         this._dinner = dinner;
     }
 
+    getTimeString() {
+        return this._date.getFullYear() + "."
+        + (this._date.getMonth() >= 10 ? this._date.getMonth() : "0" + this._date.getMonth()) + "."
+        + (this._date.getDate() >= 10 ? this._date.getDate() : "0" + this._date.getDate());
+    }
+
     getTime() {
         return this._date;
     }
