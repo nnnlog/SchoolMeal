@@ -126,7 +126,7 @@ class SchoolMeal {
                         let lists = body.resultSVO.weekDietList;
                         let day = ['sun', 'mon', 'tue', 'wed', 'the', 'fri', 'sat'];
                         for (let d of day) {
-                            if (lists[2][d] !== null && lists[2] !== undefined) {
+                            if ( lists[2] !== undefined && lists[2][d] !== null) {
                                 let meal = Meal.parseWeek(lists[0][d], lists[2][d], body.resultSVO.schMmealScCode);
                                 if (date.hasOwnProperty(meal.getTime().getDate())) {
                                     date[meal.getTime().getDate()].setString(mealType, meal.getString(mealType));
