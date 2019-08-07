@@ -1,5 +1,7 @@
 # SchoolMeal
 
+* 새로운 [neis api](https://github.com/nnnlog/neis)에서 계속 이용할 수 있습니다.
+
 * 나이스에서 학교 급식 정보를 받아와 제공해주는 API 입니다.
 
 ---
